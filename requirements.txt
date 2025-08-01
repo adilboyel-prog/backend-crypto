@@ -2,3 +2,4 @@ Flask
 ccxt
 pandas
 pandas-ta
+gunicorn
