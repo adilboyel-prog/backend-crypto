@@ -1,8 +1,8 @@
 from flask import Flask, request, jsonify
 import ccxt
 import pandas as pd
-import pandas_ta as ta # Library yang sangat membantu untuk indikator teknikal
-
+import pandas_ta as ta
+import os
 # Inisialisasi aplikasi Flask
 app = Flask(__name__)
 
@@ -80,3 +80,7 @@ def analyze_crypto():
 @app.route('/')
 def home():
     return "Crypto Analysis API is running. Gunakan endpoint /api/analyze?symbol=NAMAKOIN"
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
