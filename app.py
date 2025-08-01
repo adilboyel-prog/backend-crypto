@@ -79,7 +79,8 @@ def analyze_crypto():
 # Endpoint root untuk memastikan server berjalan
 @app.route('/')
 def home():
-    return "Crypto Analysis API is running. Gunakan endpoint /api/analyze?symbol=NAMAKOIN"
+    # Menambahkan komentar untuk memicu deploy
+    return "Crypto Analysis API is running on Railway!"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
